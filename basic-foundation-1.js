@@ -59,7 +59,7 @@ function sumOfOdd() {                       // creates a function called sumOfOd
 
  function sumOfArrayValues(arr) {                       // creates a function called sumOfArrayValues that has a parameter of arr
     var sum = 0;                                        // creates a variable sum and sets it to 0
-    for (var i = 0; i < arr.length - 1; i++) {          // For loop: creates a variable i and sets it to 1. If i is less than 5001...
+    for (var i = 0; i < arr.length - 1; i++) {          // For loop: creates a variable i and sets it to 0. If i is less than the length of arr minus 1...
         sum += arr[i];                                           // add the value of arr at index of i to the sum variable
     }
     return sum;                             // return value of sum variable, a sum of all the numbers in given array.
@@ -69,3 +69,24 @@ var testArr1 = [-5,2,5,12];                 //you can test it with this
 
 //uncomment line below to run function
 //sumOfArrayValues(testArr1);                 //call function and pass in the test array as an argument
+
+/**
+ * 5. Find Max 
+ * --------------------
+ * Given an array with multiple values, write a function that returns the maximum number in the array.
+ */
+
+ function findMax(arr) {                       // creates a function called sumOfArrayValues that has a parameter of arr
+    var max = 0;                                        // creates a variable sum and sets it to 0
+    for (var i = 0; i < arr.length; i++) {          // For loop: creates a variable i and sets it to 0. If i is less than the length of arr...
+        if ( arr[i] > max) {                                // If value of arr at index i is greater than value of var max
+            max = arr[i];                                       // set var max to the value of arr at index i
+        }
+    }
+    return max;                             // return value of sum variable, a sum of all the numbers in given array.
+}
+
+var testArr2= [-3,3,5,7];                 //you can test it with this
+
+//uncomment line below to run function
+//findMax(testArr2);                 //call function and pass in the test array as an argument
