@@ -76,8 +76,30 @@ var testArr1 = [-5,2,5,12];                 //you can test it with this
  * Given an array with multiple values, write a function that returns the maximum number in the array.
  */
 
- function findMax(arr) {                       // creates a function called sumOfArrayValues that has a parameter of arr
-    var max = 0;                                        // creates a variable sum and sets it to 0
+ function findMax(arr) {                       // creates a function called findMax that has a parameter of arr
+    var max = 0;                                     // creates a variable max and sets it to 0
+    for (var i = 0; i < arr.length; i++) {          // For loop: creates a variable i and sets it to 0. If i is less than the length of arr...
+        if ( arr[i] > max) {                                // If value of arr at index i is greater than value of var max
+            max = arr[i];                                       // set var max to the value of arr at index i
+        }
+    }
+    return max;                             // return value of max variable, the largest number in the array.
+}
+
+var testArr2= [-3,3,5,7];                 //you can test it with this
+
+//uncomment line below to run function
+//findMax(testArr2);                 //call function and pass in the test array as an argument
+
+/**
+ * 6. Find Average 
+ * --------------------
+ * Given an array with multiple values, write a function that returns the average of the values in the array.
+ */
+
+ function findAvg(arr) {                       // creates a function called sumOfArrayValues that has a parameter of arr
+    var max = 0;                                       // initializes and sets var max to 0
+    var min = 0;                                       // initializes and sets var min to 0;
     for (var i = 0; i < arr.length; i++) {          // For loop: creates a variable i and sets it to 0. If i is less than the length of arr...
         if ( arr[i] > max) {                                // If value of arr at index i is greater than value of var max
             max = arr[i];                                       // set var max to the value of arr at index i
