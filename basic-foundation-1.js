@@ -97,7 +97,7 @@ var testArr2= [-3,3,5,7];                 //you can test it with this
  * Given an array with multiple values, write a function that returns the average of the values in the array.
  */
 
- function findAvg(arr) {                       // creates a function called sumOfArrayValues that has a parameter of arr
+ function findAvg(arr) {                       // creates a function called findAvg that has a parameter of arr
     var max = 0;                                       // initializes and sets var max to 0
     var min = 0;                                       // initializes and sets var min to 0;
     for (var i = 0; i < arr.length; i++) {          // For loop: creates a variable i and sets it to 0. If i is less than the length of arr...
