@@ -225,6 +225,21 @@ function negatives(arr) {                      //creates negatives function that
  * --------------------
  * Write a function that will swap the first and last values of any given array. The default minimum length of the array is 2. 
  */
+function swapValues(arr) {
+    if (arr.length < 2) {               //checks to make sure input array has at least 2 items in it
+        console.log("This array does not have enough items to run this function");
+    }
+    
+    arr[0] = arr[0]+ arr[arr.length-1];                     // sets first index of array the sum of itself and the last index in array
+    arr[arr.length - 1] = arr[0] - arr[arr.length - 1];     // sets last index of array to be the difference between current first array and last array, which is the original value of arr[0]
+    arr[0] = arr[0] - arr[arr.length - 1];                  // sets first index of array to be the difference between first array and last array, which is the original value of last index in array
+    
+    return arr;  //returns the swapped array. BOOP!
+}
+
+var testArr8 = [1,5,10,-2];
+swapValues(testArr8);
+ 
 
   /**
  * 13. Number to String
