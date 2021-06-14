@@ -191,3 +191,43 @@ function negatives(arr) {                      //creates negatives function that
  var testArr6 = [1,5,10,-2];                //test array
  //uncomment line below to run function
  //squares(testArr6);                   //calls squares function with testArr as the argument
+
+ /**
+ * 11. Min/Max/Avg
+ * --------------------
+ * Given an array with multiple values, write a function that returns a new array that only contains the maximum, minimum, 
+ * and average values of the original array. 
+ */
+
+ function minMaxAvg (arr) {
+     var min = 0;
+     var max = 0;
+     var avg = 0;
+     var minMaxAvg = [];
+     for (var i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        } else if (arr[i] < min) {
+            min = arr[i];
+        }
+        avg = avg + arr[i];
+     }
+     avg = avg / arr.length;
+     minMaxAvg.push(min, max, avg);
+     return minMaxAvg;
+ }
+
+ var testArr7 = [1,5,10,-2];
+ minMaxAvg(testArr7);
+
+ /**
+ * 12. Swap Values
+ * --------------------
+ * Write a function that will swap the first and last values of any given array. The default minimum length of the array is 2. 
+ */
+
+  /**
+ * 13. Number to String
+ * --------------------
+ * Write a function that takes an array of numbers and replaces any negative values within the array with the string 'Dojo'. 
+ */
