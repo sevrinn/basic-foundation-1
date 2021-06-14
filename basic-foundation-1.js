@@ -154,5 +154,21 @@ function greaterThanY(arr, valueOfY) {                    //creates a function c
 }
 var testArr4 = [1, 3, 5, 7];  //test array
 //uncomment line below to run function
-//greaterThanY(testArr4);   //calls the greaterThanY function, passing in testArr4 as the argument
+//greaterThanY(testArr4, 3);   //calls the greaterThanY function, passing in testArr4 and 3 as the argument
 
+/**
+ * 9. Squares 
+ * --------------------
+ * Given an array with multiple values, write a function that replaces each value in the array with the value squared by itself. 
+ */
+
+function squares(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        arr[i] = arr[i] * arr[i];
+    }
+    return arr;
+}
+
+var testArr5 = [1,5,10,-2];
+//uncomment line below to run function
+//squares(testArr5);  //calls the squares function, passing in testArr5 as the argument
