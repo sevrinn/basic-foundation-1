@@ -1,4 +1,8 @@
 /**
+ * This is my BASIC FOUNDATION I assignment for the JavaScript section of the Web Fundamentals module of Coding Dojo's Accelerated Flex Bootcamp.
+ * It's 13 Basic Algorithms written from scratch. I've commented them to hell to demonstrate my understanding of what each one does. Def a fun challenge!
+ */
+/**
  * 1. Get 1 to 255 
  * ----------------
  * Write a function that returns an array with all the numbers from 1 to 255.    
@@ -11,8 +15,7 @@ function oneToTwoFiftyFive() {          // creates a function called oneToTwoFif
     return arr;                         // return arr, an array of all the numbers from 1 to 255.
 }
 
-//uncomment line below to run function
-//oneToTwoFiftyFive();
+oneToTwoFiftyFive(); //calls the onToTwoFiftyFive function
 
 /**
  * 2. Get even 1000 
@@ -30,8 +33,8 @@ function sumOfEven() {                      // creates a function called sumOfEv
     }
     return sum;                             // return value of sum variable, a sum of all the even numbers from 1 - 1000
 }
-//uncomment line below to run function
-//sumOfEven();
+
+sumOfEven();        //calls the sumOfEven function
 
 /**
  * 3. Sum odd 5000 
@@ -48,8 +51,8 @@ function sumOfOdd() {                       // creates a function called sumOfOd
     }
     return sum;                             // return value of sum variable, a sum of all the odd numbers from 1 - 5000
 }
-//uncomment line below to run function
-//sumOfOdd();
+
+sumOfOdd();     //calls the sumOfOdd function
 
 /**
  * 4. Iterate an array 
@@ -66,9 +69,7 @@ function sumOfOdd() {                       // creates a function called sumOfOd
 }
 
 var testArr1 = [-5,2,5,12];                 //you can test it with this
-
-//uncomment line below to run function
-//sumOfArrayValues(testArr1);                 //call function and pass in the test array as an argument
+sumOfArrayValues(testArr1);                 //calls function and passes in the test array as an argument
 
 /**
  * 5. Find Max 
@@ -87,9 +88,7 @@ var testArr1 = [-5,2,5,12];                 //you can test it with this
 }
 
 var testArr2= [-3,3,5,7];                 //you can test it with this
-
-//uncomment line below to run function
-//findMax(testArr2);                 //call function and pass in the test array as an argument
+findMax(testArr2);                 //call function and pass in the test array as an argument
 
 /**
  * 6. Find Average 
@@ -108,9 +107,7 @@ var testArr2= [-3,3,5,7];                 //you can test it with this
 }
 
 var testArr3= [1,3,5,7,20];                 //you can test it with this
-
-//uncomment line below to run function
-//findAvg(testArr3);                 //call function and pass in the test array as an argument
+findAvg(testArr3);                 //call function and pass in the test array as an argument
 
 /**
  * 7. Array Odd 
@@ -131,10 +128,7 @@ var testArr3= [1,3,5,7,20];                 //you can test it with this
     return odds;                     // return value of odds variable, an array of odd numbers from 1 to 50
 }
 
-
-
-//uncomment line below to run function
-//arrayOdd();                   //call function and pass in the test array as an argument
+arrayOdd();                   //call function and pass in the test array as an argument
 
 /**
  * 8. Greater Than Y 
@@ -152,9 +146,9 @@ function greaterThanY(arr, valueOfY) {                    //creates a function c
     }
     return greaterThanY;                    //return greaterThanY array
 }
+
 var testArr4 = [1, 3, 5, 7];  //test array
-//uncomment line below to run function
-//greaterThanY(testArr4, 3);   //calls the greaterThanY function, passing in testArr4 and 3 as the argument
+greaterThanY(testArr4, 3);   //calls the greaterThanY function, passing in testArr4 and 3 as the arguments
 
 /**
  * 9. Squares 
@@ -170,8 +164,7 @@ function squares(arr) {
 }
 
 var testArr5 = [1,5,10,-2];
-//uncomment line below to run function
-//squares(testArr5);  //calls the squares function, passing in testArr5 as the argument
+squares(testArr5);  //calls the squares function, passing in testArr5 as the argument
 
 /**
  * 10. Negatives 
@@ -189,8 +182,7 @@ function negatives(arr) {                      //creates negatives function that
     return arr;                                 //return arr array
 }
  var testArr6 = [1,5,10,-2];                //test array
- //uncomment line below to run function
- //squares(testArr6);                   //calls squares function with testArr as the argument
+ squares(testArr6);                   //calls squares function with testArr6 as the argument
 
  /**
  * 11. Min/Max/Avg
@@ -200,21 +192,21 @@ function negatives(arr) {                      //creates negatives function that
  */
 
  function minMaxAvg (arr) {
-     var min = 0;
-     var max = 0;
-     var avg = 0;
-     var minMaxAvg = [];
-     for (var i = 0; i < arr.length; i++) {
-        if (arr[i] > max) {
-            max = arr[i];
-        } else if (arr[i] < min) {
-            min = arr[i];
+     var min = 0;                               //initializes var min at 0
+     var max = 0;                               //initializes var max at 0
+     var avg = 0;                               //initializes var avg at 0
+     var minMaxAvg = [];                        //initializes var minMaxAvg as an empty string
+     for (var i = 0; i < arr.length; i++) {     //For loop: sets variable i to 0. If i is less than the length of arr...
+        if (arr[i] > max) {                         //if value of arr at index i is greater than max
+            max = arr[i];                               //set max to that value of arr at index i
+        } else if (arr[i] < min) {                  //else if value of arr at index i is less than min
+            min = arr[i];                               //set min to that value of arr at index i
         }
-        avg = avg + arr[i];
+        avg = avg + arr[i];                         //sets avg to be sum of itself and the current index of arr
      }
-     avg = avg / arr.length;
-     minMaxAvg.push(min, max, avg);
-     return minMaxAvg;
+     avg = avg / arr.length;                    //sets avg to be the quotient of avg var (all the indexes added up together) divided by it's length.
+     minMaxAvg.push(min, max, avg);             //pushes min, max, and avg to the minMaxAvg array
+     return minMaxAvg;                          //returns minMaxAvg array
  }
 
  var testArr7 = [1,5,10,-2];
@@ -230,9 +222,9 @@ function swapValues(arr) {
         console.log("This array does not have enough items to run this function");
     }
     
-    arr[0] = arr[0]+ arr[arr.length-1];                     // sets first index of array the sum of itself and the last index in array
-    arr[arr.length - 1] = arr[0] - arr[arr.length - 1];     // sets last index of array to be the difference between current first array and last array, which is the original value of arr[0]
-    arr[0] = arr[0] - arr[arr.length - 1];                  // sets first index of array to be the difference between first array and last array, which is the original value of last index in array
+    arr[0] = arr[0]+ arr[arr.length-1];                     // sets first item in array to the sum of itself and the last index in array
+    arr[arr.length - 1] = arr[0] - arr[arr.length - 1];     // sets last item in array to be the difference between current first array and last array, which is the original value of arr[0]
+    arr[0] = arr[0] - arr[arr.length - 1];                  // sets first index of array to be the difference between first array and last array, which is the original value of last item in array
     
     return arr;  //returns the swapped array. BOOP!
 }
@@ -246,3 +238,14 @@ swapValues(testArr8);
  * --------------------
  * Write a function that takes an array of numbers and replaces any negative values within the array with the string 'Dojo'. 
  */
+function numToString(arr) {
+    for (var i = 0; i < arr.length; i++) { //interates through array 
+        if (arr[i] < 0) {                   //if value of arr at index i is less than 0...
+            arr[i] = 'Dojo';                    //set it's value to the string Dojo
+        }
+    }
+    return arr;         //return that bad boy
+}
+
+var testArr9 = [-1, -2, 3, 7, -34];  //test array
+numToString(testArr9); //calls the numToString function, passing testArr9 as the argument
