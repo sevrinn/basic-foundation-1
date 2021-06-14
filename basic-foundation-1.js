@@ -172,3 +172,22 @@ function squares(arr) {
 var testArr5 = [1,5,10,-2];
 //uncomment line below to run function
 //squares(testArr5);  //calls the squares function, passing in testArr5 as the argument
+
+/**
+ * 10. Negatives 
+ * --------------------
+ * Given an array with multiple values, write a function that replaces any negative numbers within the array with the value of 0. 
+ * When the program is done the array should contain no negative values. 
+ */
+
+function negatives(arr) {                      //creates negatives function that takes arr as a parameter
+    for (var i = 0; i < arr.length; i ++) {    //For loop: creates and sets variable i to 0. If i is less than length of array...
+        if (arr[i] < 0) {                           //if the value of arr at index i is less than 0...
+            arr[i] = 0;                                 // set value of arr at index i to 0.
+        }
+    }
+    return arr;                                 //return arr array
+}
+ var testArr6 = [1,5,10,-2];                //test array
+ //uncomment line below to run function
+ //squares(testArr6);                   //calls squares function with testArr as the argument
