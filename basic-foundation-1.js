@@ -98,17 +98,40 @@ var testArr2= [-3,3,5,7];                 //you can test it with this
  */
 
  function findAvg(arr) {                       // creates a function called findAvg that has a parameter of arr
-    var max = 0;                                       // initializes and sets var max to 0
-    var min = 0;                                       // initializes and sets var min to 0;
+    var sum = 0;                                       // initializes and sets var max to 0
+    var avg = 0;                                       // initializes and sets var min to 0;
     for (var i = 0; i < arr.length; i++) {          // For loop: creates a variable i and sets it to 0. If i is less than the length of arr...
-        if ( arr[i] > max) {                                // If value of arr at index i is greater than value of var max
-            max = arr[i];                                       // set var max to the value of arr at index i
-        }
+        sum += arr[i];
     }
-    return max;                             // return value of sum variable, a sum of all the numbers in given array.
+    avg = sum / arr.length;
+    return avg;                             // return value of avg variable, an avg of numbers in given array.
 }
 
-var testArr2= [-3,3,5,7];                 //you can test it with this
+var testArr3= [1,3,5,7,20];                 //you can test it with this
 
 //uncomment line below to run function
-//findMax(testArr2);                 //call function and pass in the test array as an argument
+//findAvg(testArr3);                 //call function and pass in the test array as an argument
+
+/**
+ * 7. Array Odd 
+ * --------------------
+ * Write a function that would return an array of all the odd numbers between 1 to 50. 
+ */
+
+ function arrayOdd() {               // creates a function called arrayOdd 
+    var odds = [];                       // initializes and sets var odds to be an empty array
+                                          
+    for (var i = 1; i <= 50; i++) {          // For loop: creates a variable i and sets it to 0. If i is less than or equal to 50...
+        
+        if (i % 2 != 0){                    //if the value of arr at index i modulus 2 is not 0...
+            odds.push(i);                       //push the value of arr at index i to the odds array
+        }
+    }
+    
+    return odds;                     // return value of odds variable, an array of odd numbers from 1 to 50
+}
+
+
+
+//uncomment line below to run function
+//arrayOdd();                   //call function and pass in the test array as an argument
