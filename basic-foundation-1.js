@@ -135,3 +135,24 @@ var testArr3= [1,3,5,7,20];                 //you can test it with this
 
 //uncomment line below to run function
 //arrayOdd();                   //call function and pass in the test array as an argument
+
+/**
+ * 8. Greater Than Y 
+ * --------------------
+ * Given value of Y, write a function that takes an array and returns the number of values that are greater than Y. 
+ */
+
+function greaterThanY(arr, valueOfY) {                    //creates a function called greaterThanY that takes an arr as a parameter
+    var y = valueOfY;                                       //sets valueOfY to 3;
+    var greaterThanY = [];                                  //sets greaterThanY to an empty string
+    for (var i = 0; i < arr.length; i++) {                  //For loop: creates a variable i and sets it to 0. if i is less than length of arr
+        if (arr[i] > y) {                                       //if the value of arr at index i is greater than y...
+            greaterThanY.push(arr[i]);                              //push value of arr at index i to end of greaterThanY array
+        }
+    }
+    return greaterThanY;                    //return greaterThanY array
+}
+var testArr4 = [1, 3, 5, 7];  //test array
+//uncomment line below to run function
+//greaterThanY(testArr4);   //calls the greaterThanY function, passing in testArr4 as the argument
+
